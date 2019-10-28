@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>COUNTPAGE</title>
+</head>
+<body>
+<h1>There were {{count}} words in your text </h1>
+<br/>
+<a href="{% url 'home' %}"> Count again!</a>
+<h1>The full text:</h1>
+<h2>{{fulltext}}</h2>
+<br />
+<h1>Words and times found in text</h1>
+
+{% for word, counttotal in sortedwords %}
+
+{{ word }} : {{ counttotal }}
+<br />
+{% endfor %}
+
+<br />
+</body>
+</html>
